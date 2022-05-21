@@ -1,0 +1,10 @@
+#Importa o webdriver
+from selenium import webdriver
+#cria a variável navegador
+navegador = webdriver.Chrome()
+#abre o Chrome e acessa o site
+navegador.get("https://www.siapenet.gov.br/Portal/Servico/Apresentacao.asp")
+#clia em um menu 
+navegador.find_element_by_xpath('//*[@id="mnConsignataria"]/a').click()
+#clica em outro menu
+navegador.find_element_by_xpath('//*[@id="mensagem-inicial"]/ul/li[3]/a').click()
